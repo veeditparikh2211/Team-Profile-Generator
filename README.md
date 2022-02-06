@@ -22,7 +22,7 @@ Jest
 
 ## Video
 
-![]()
+![](images/teamgenerator.gif)
 ## Contribution
 
 Made by Veedit Parikh

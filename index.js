@@ -7,7 +7,6 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
 const generatehtml = require('./src/generatehtml');
-const { defaultMaxListeners } = require('events');
 
 const OUTPUT_DIR = path.resolve(__dirname, 'output');
 const teamMembers = [];
