@@ -7,12 +7,16 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
 const generatehtml = require('./src/generatehtml');
+const { defaultMaxListeners } = require('events');
 
 const OUTPUT_DIR = path.resolve(__dirname, 'output');
 const teamMembers = [];
 
 function init() {
 
+    // =========================
+    // Enter Manager Information
+    // =========================
     function addmanager() {
         inquirer.prompt([{
                 type: 'input',
@@ -21,10 +25,10 @@ function init() {
 
                 validate: answer => {
 
-                    if (answer = '') {
-                        return 'Please enter a name';
+                    if (answer != '') {
+                        return true;
                     }
-                    return true
+                    return "Enter Manager's name";
                 }
             },
             {
@@ -52,6 +56,9 @@ function init() {
         });
     }
 
+    // =================
+    // Add a Taem Member
+    // =================
     function addteam() {
         inquirer.prompt([
 
@@ -78,6 +85,9 @@ function init() {
         });
     }
 
+    // ==========================
+    // Enter Engineer Information
+    // ==========================
 
     function addEngineer() {
 
@@ -110,6 +120,10 @@ function init() {
         });
     }
 
+    // ========================
+    // Enter Intern Information
+    // ========================
+
     function addIntern() {
 
         inquirer.prompt([{
@@ -140,13 +154,17 @@ function init() {
         });
     }
 
-    function createTeam() {
+    // ===================
+    // HTML file generated
+    // ===================
 
+    function createTeam() {
 
         if (!fs.existsSync(OUTPUT_DIR)) {
             fs.mkdirSync(OUTPUT_DIR);
         }
         fs.writeFileSync("./output/team.html", generatehtml(teamMembers), "utf-8");
+        console.log("Html file created successfully");
     }
 
     addmanager();

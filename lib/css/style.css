@@ -1,10 +1,37 @@
 .heading {
     background-color: blue;
-    color: aqua;
+    color: ghostwhite;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100px;
+    margin-top: 14;
 }
 
 .container {
-    background-color: aqua;
+    background-color: darkgrey;
     color: black;
-    font-size: 20px;
+    font-size: 25px;
+}
+
+.information {
+    max-width: max-content;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: cadetblue;
+    color: black;
+    flex-direction: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.list-group-item {
+    color: crimson;
+    text-align: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    background-color: burlywood;
 }

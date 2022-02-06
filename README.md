@@ -17,7 +17,7 @@ Jest
 
 ## Application
 
-![](images/application_page.PNG)
+![](images/screenshot.PNG)
 
 
 ## Video

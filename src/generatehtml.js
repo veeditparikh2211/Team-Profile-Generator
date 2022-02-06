@@ -75,7 +75,8 @@ const newteam = (team) => {
     }
 
     for (let i = 0; i < team.length; i++) {
-        console.log(team);
+        // console.log(team);
+
         if (team[i].role === "Manager") {
             newManager(team[i]);
         }
@@ -119,7 +120,7 @@ module.exports = (team) => {
 
         <div class="row">
 
-            <div class="col-12 d-flex justify-content-center">
+            <div class="information col-12 d-flex justify-content-center">
                ${newteam(team)}
             </div>
             </div>
